@@ -1,0 +1,16 @@
+# Ignore all node_modules directories
+**/node_modules/
+
+# Ignore husky directory in workflow-demo
+/workflow-demo/.husky
+
+# Ignore ESLint configuration
+.eslintrc.json
+
+# Ignore Babel configuration
+babel.config.json
+
+# Ignore all package-lock.json files
+**/package-lock.json
+package.json
+package-lock.json

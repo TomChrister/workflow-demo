@@ -1,4 +1,5 @@
-import { add } from "./index";
+import { add } from "./index.js";
+import { divide } from './calculator.js';
 
 test("It adds one and one and returns two", () => {
     // arrange
@@ -10,14 +11,13 @@ test("It adds one and one and returns two", () => {
     expect(add(param1, param2)).toEqual(expected);
 });
 
-import { divide } from './index';
-
 test('Should throw a error when divided by 0', () => {
     // arrange
 
-    const param1 = 1;
-    const param2 = 0;
+    const num1 = 1;
+    const num2 = 0;
 
     // act and assert
-    expect(() => divide(param1, param2)).toThrow('Cant divide by 0');
-})
+    expect(() => divide(num1, num2)).toThrowError('Cant divide by 0');
+});
+

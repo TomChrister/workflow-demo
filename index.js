@@ -1,19 +1,31 @@
-export function add(num1, num2) {
-    return num1 + num2;
+import { addTokenToStorage } from './storage.js';
+import { add } from './calculator.js';
+import { divide } from './calculator.js';
+
+const someNumber = 2;
+if (someNumber === 2) {
+    console.log('The number is 2');
 }
-add();
+console.log(add(someNumber, 3));
 
-export function minus(num1, num2) {
-    return num1 - num2;
-}
-minus();
+const userInput = {num1: 1, num2: 0};
 
-
-export function divide(num1, num2) {
-    if (num2 === 0) {
-        throw Error('Cant divide by 0');
+try {
+    divide(userInput.num1, userInput.num2);
+} catch (e) {
+    if (e.message === 'Cannot divide by zero') {
+        console.error('You cannot divide by zero');
     }
-    return num1 / num2;
+    console.error(e.message)
 }
 
-divide();
+addTokenToStorage('34dfgdfgdf0403gdfdsfsdfs23');
+
+
+
+const message = document.getElementById('message').value;
+
+function showAlert() {
+    alert(message);
+}
+showAlert();
